@@ -1,6 +1,6 @@
 IUpdatable
 =======================
-
+Common function package
 封装常用函数
 
 详细文档：https://www.cnblogs.com/IUpdatable/articles/12500039.html
