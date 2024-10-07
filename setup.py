@@ -17,12 +17,12 @@ URL = 'https://www.cnblogs.com/IUpdatable/'
 EMAIL = 'IUpdatable@163.com'
 AUTHOR = 'IUpdatable'
 REQUIRES_PYTHON = '>=3.10.0'
-VERSION = '0.3.0'
+VERSION = '0.3.1'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
-    'colorlog', 'concurrent-log-handler', 'requests', "SQLAlchemy", "deprecation"
+    'colorlog', 'concurrent-log-handler', 'requests', "SQLAlchemy", "deprecation", "asyncio"
 ]
 
 # What packages are optional?
