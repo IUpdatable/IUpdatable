@@ -1,7 +1,5 @@
 setuptools
 lib==3.0.0
-
-iupdatable
 colorlog
 requests
 asyncio

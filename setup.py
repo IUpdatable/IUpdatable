@@ -16,13 +16,13 @@ DESCRIPTION = '常用函数封装'
 URL = 'https://www.cnblogs.com/IUpdatable/'
 EMAIL = 'IUpdatable@163.com'
 AUTHOR = 'IUpdatable'
-REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.2.4'
+REQUIRES_PYTHON = '>=3.10.0'
+VERSION = '0.3.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
     # 'requests', 'maya', 'records',
-    'colorlog', 'concurrent-log-handler', 'requests', "SQLAlchemy"
+    'colorlog', 'concurrent-log-handler', 'requests', "SQLAlchemy", "deprecation"
 ]
 
 # What packages are optional?
@@ -120,7 +120,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],

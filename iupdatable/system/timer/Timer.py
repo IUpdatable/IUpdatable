@@ -143,3 +143,88 @@ class Timer(object):
         :return: default output example: 2020-12-25 17:17:42
         """
         return Timer.unix_to_datetime_str(unix, fmt, tz)
+
+    @staticmethod
+    def parse_datetime_str(dt_str, fmt="%Y-%m-%d %H:%M:%S"):
+        """
+        Parse datetime string to datetime
+        解析 datetime 字符串为 datetime
+        :param dt_str: datetime string
+        :param fmt: 格式化字符串 format string, default is "%Y-%m-%d %H:%M:%S"
+        :return: 失败返回 None
+        """
+        try:
+            return datetime.strptime(dt_str, fmt)
+        except Exception as e:
+            return None
+
+    @staticmethod
+    def get_formatted_datetime_str(dt=None, fmt="%Y-%m-%d %H:%M:%S"):
+        """
+        Get formatted datetime string
+        获取格式化的 datetime 字符串
+        :param dt: datetime object, default is current time
+        :param fmt: 格式化字符串 format string, default is "%Y-%m-%d %H:%M:%S"
+        :return: 格式化后的 datetime 字符串
+        """
+        if dt is None:
+            dt = datetime.now()
+        return dt.strftime(fmt)
+
+    @staticmethod
+    def get_formatted_date_str(dt=None, fmt="%Y-%m-%d"):
+        """
+        Get formatted date string
+        获取格式化的 日期 字符串
+        :param dt: datetime object, default is current datetime
+        :param fmt: 格式化字符串 format string, default is "%Y-%m-%d"
+        :return: 格式化后的 日期 字符串
+        """
+        return Timer.get_formatted_datetime_str(dt, fmt)
+
+    @staticmethod
+    def get_formatted_time_str(dt=None, fmt="%H:%M:%S"):
+        """
+        Get formatted time string
+        获取格式化的 时间 字符串
+        :param dt: datetime object, default is current datetime
+        :param fmt: 格式化字符串 format string, default is "%H:%M:%S"
+        :return: 格式化后的 时间 字符串
+        """
+        return Timer.get_formatted_datetime_str(dt, fmt)
+
+    @staticmethod
+    def get_today_str(fmt="%Y-%m-%d"):
+        """
+        Get today string
+        :param fmt: 格式化字符串 format string, default is "%Y-%m-%d"
+        :return: 格式化后的 日期 字符串
+        """
+        return Timer.get_formatted_datetime_str(datetime.now(), fmt)
+
+    @staticmethod
+    def get_now_str(fmt="%Y-%m-%d %H:%M:%S"):
+        """
+        Get now string
+        :param fmt: 格式化字符串 format string, default is "%Y-%m-%d %H:%M:%S"
+        :return: 格式化后的 日期+时间 字符串
+        """
+        return Timer.get_formatted_date_str(datetime.now(), fmt)
+
+    @staticmethod
+    def get_now_date_str(fmt="%Y-%m-%d"):
+        """
+        Get now date string
+        :param fmt: 格式化字符串 format string, default is "%Y-%m-%d"
+        :return: 格式化后的 时间 字符串
+        """
+        return Timer.get_formatted_datetime_str(datetime.now(), fmt)
+
+    @staticmethod
+    def get_now_time_str(fmt="%H:%M:%S"):
+        """
+        Get now time string
+        :param fmt: 格式化字符串 format string, default is "%H:%M:%S"
+        :return: 格式化后的 时间 字符串
+        """
+        return Timer.get_formatted_datetime_str(datetime.now(), fmt)

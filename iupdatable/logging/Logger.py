@@ -40,6 +40,8 @@ class Logger(object):
         """
         return Logger()
 
+
+
     @classmethod
     def config(cls,
                log_level=LogLevel.DEBUG,

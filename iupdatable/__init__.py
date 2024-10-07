@@ -6,3 +6,4 @@ from iupdatable.system.convert.Base64 import Base64
 from iupdatable.system.hardware.CSProduct import CSProduct
 from iupdatable.system.common.Status import Status
 from iupdatable.system.timer.Timer import Timer
+from iupdatable.services.SelfCleaningBackgroundService import SelfCleaningBackgroundService

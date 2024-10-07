@@ -1,0 +1,7 @@
+
+/.idea
+/iupdatable.egg-info
+/build
+/dist
+/tests
+*.pyc
